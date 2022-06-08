@@ -1,0 +1,145 @@
+/*--------Reset CSS----------*/
+/*---------------------------*/
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+
+/*-------code for smooth scrolling and hiding the scrollbar for multiple browsers---------*/
+
+/*allows for smooth scrolling and hides scrollbar for firefox*/
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+/*hides scrollbars for chrome, edge, ie, but not firefox*/
+.disable-scrollbars::-webkit-scrollbar {
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }
+      
+.disable-scrollbars {
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+
+
+/*------------Body font------------*/
+/*---------------------------------*/
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+/*---Extra small (BASE STYLE) devices---*/
+/*-------------------------*/
+/*this is the base styling used for all device sizes, if there are animations or different font-sizes, they will be added on at the other media queries, you don't need to re-specify display:flex, height: 100vh, etc, for every media query*/
+
+
+
+
+/*---------Navbar Styles---------*/
+/*-------------------------------*/
+
+
+/* use code below to change color of bootstrap default hamburger icon*/
+
+.navbar-toggler:focus, .navbar-toggler{
+    border: none;
+    box-shadow: none; /*getting rid of box-shadow when you click on hamburger icon*/
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(59, 201, 219, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse{
+    margin-right: 12px;
+}
+
+.nav-link:link, .nav-link:visited{
+    color: #3bc9db
+}
+
+.nav-link:hover, .nav-link:active{
+    color: #0b7285
+}
+
+
+
+/*-------Home Page Styles--------*/
+/*-------------------------------*/
+.home-page{
+    display: flex;
+    height: calc(100vh - 56px); /*56px is height of navbar*/
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-page-content h1{
+    font-family: 'Lobster', cursive;
+    font-size: 64px;
+}
+
+.home-page-content h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+}
+
+
+/*------Project Section Styles------*/
+/*----------------------------------*/
+
+
+
+
+
+
+
+/*---Breakpoint for small devices---*/
+/*----------------------------------*/
+@media (min-width: 600px) {
+
+
+
+
+
+
+/*--------Home Page---------*/
+/*--------------------------*/
+
+@keyframes slide-up{
+    0% {transform: translateY(70px); opacity:0;}
+    100% {transform: translateY(0); opacity:1;}
+}
+
+@keyframes fade-up{
+    0% {opacity: 0; transform: translateY(70px);}
+    50% {opacity: 0; transform: translateY(70px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+.home-page-content h1{
+    animation: slide-up 0.5s;
+    font-size: 96px;
+}
+
+.home-page-content h2{
+    animation: fade-up 1s;
+    font-size: 48px;
+}
+
+
+/*-------------*/
+
+}
