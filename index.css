@@ -35,7 +35,7 @@ html{
 body{
     font-family: 'Oswald', sans-serif;
     color: #ced4da;
-    background-color: #212529;
+    background-color: #343a40;
 }
 
 
@@ -123,8 +123,10 @@ body{
 }
 
 .project-content{
+    
     box-shadow: 0 10px 20px rgba(255,255,255,0.2);
     cursor: pointer;
+    background-color: #212529;
 }
 
 .project-content:hover, .project-content:active{
@@ -155,24 +157,39 @@ body{
 /*-------------------------------*/
 
 
+.about-me-content{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 30px 0 30px;
+    /* box-shadow: 0 10px 20px rgba(255,255,255,0.2); */
+}
+
+.about-me-content img{
+    margin: 40px;
+    border-radius: 50%;
+    
+}
+
 /* I think the layout looks fine all the way up til tablets, I think for tablets I will start adding animations, then at laptops I will make two columns */
 
 
 
-/* @media (min-width: 600px) {
+@media (min-width: 600px) {
 
-    .home-page-content h1{
-        font-family: 'Lobster', cursive;
-        font-size: 64px;
-        color: red;
-    }
+/*-----About Me-----*/
+/*------------------*/
+
+.about-me{
+    width: 80%;
+    margin: 0 auto;
+}
 
 }
- */
+
 
 /*this media query is only used for the AOS library to not trigger animations when width < 767px*/
  @media(max-width: 768px){ 
-    .project-content[data-aos=fade-left], .project-content[data-aos=fade-right] {
+    .project-content[data-aos=fade-left], .project-content[data-aos=fade-right], .about-me[data-aos=fade-up] {
         -webkit-transform: translateX(0);
         transform: translateX(0);
         opacity: 1;
@@ -230,8 +247,20 @@ body{
     animation: fade-in 1s;
 }
 
+
+
+
 }
 
+
+/*----Breakpoint for small laptops----*/
+
+@media (min-width: 992px){
+    .about-me{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
 
 
 /*----Breakpoint for laptops/desktops----*/
@@ -245,5 +274,10 @@ body{
 
     .project{
         width:75%;
+    }
+
+    .about-me{
+        width: 60%;
+        margin: 0 auto;
     }
 }
