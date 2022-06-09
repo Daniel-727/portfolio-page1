@@ -108,11 +108,12 @@ body{
     flex-direction: column;
 }
 
+/*General tip, don't really use responsive or relative units for height or elements and spacing will change whenever you change the screen size*/
+
 .project{
     width:70%;
-    height: 50vh;
     margin: 0 auto;
-    padding-top: 5vh;
+    padding-top: 25px;
 }
 
 .project-content{
@@ -144,7 +145,7 @@ body{
 
 /*---Breakpoint for Tablets---*/
 /*----------------------------------*/
-@media (min-width: 768px) {
+@media (min-width: 600px) {
 
 
 
