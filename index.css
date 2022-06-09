@@ -34,6 +34,7 @@ html{
 
 body{
     font-family: 'Oswald', sans-serif;
+    color: #495057;
 }
 
 
@@ -66,11 +67,11 @@ body{
 }
 
 .nav-link:link, .nav-link:visited{
-    color: #3bc9db
+    color: #3bc9db;
 }
 
 .nav-link:hover, .nav-link:active{
-    color: #0b7285
+    color: #0b7285;
 }
 
 
@@ -89,18 +90,58 @@ body{
 .home-page-content h1{
     font-family: 'Lobster', cursive;
     font-size: 64px;
+    color: #212529;
 }
 
 .home-page-content h2{
     font-family: 'Oswald', sans-serif;
     font-size: 32px;
+    color: #3bc9db;
 }
 
 
 /*------Project Section Styles------*/
 /*----------------------------------*/
 
+.projects{
+    display: flex;
+    flex-direction: column;
+}
 
+/* .projects h2{
+    position: absolute;
+    padding-left: 10px;
+} */
+
+.project{
+    width:70%;
+    height: 65vh;
+    margin: 0 auto;
+    padding: 8vh 0;
+}
+
+.project-content{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.project-description{
+    padding: 5px;
+}
+
+.project-description h3{
+    color: #3bc9db;
+}
+
+.project-description p{
+    line-height: 0.1rem;
+    font-size: 0.93rem;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
 
 
 
