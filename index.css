@@ -140,17 +140,34 @@ body{
 }
 
 
+/* I think the layout looks fine all the way up til tablets, I think for tablets I will start adding animations, then at laptops I will make two columns */
 
+
+
+/* @media (min-width: 600px) {
+
+    .home-page-content h1{
+        font-family: 'Lobster', cursive;
+        font-size: 64px;
+        color: red;
+    }
+
+}
+ */
+
+/*this media query is only used for the AOS library to not trigger animations when width < 767px*/
+ @media(max-width: 768px){ 
+    .project-content[data-aos=fade-left], .project-content[data-aos=fade-right] {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 
 /*---Breakpoint for Tablets---*/
 /*----------------------------------*/
-@media (min-width: 600px) {
-
-
-
-
-
+@media (min-width: 768px) {
 
 /*--------Home Page---------*/
 /*--------------------------*/
@@ -166,6 +183,11 @@ body{
     100% {opacity: 1; transform: translateY(0);}
 }
 
+@keyframes fade-in{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
 .home-page-content h1{
     animation: slide-up 0.5s;
     font-size: 96px;
@@ -176,7 +198,8 @@ body{
     font-size: 48px;
 }
 
-
-/*-------------*/
+.project-content{
+    animation: fade-in 1s;
+}
 
 }
