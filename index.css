@@ -58,12 +58,17 @@ body{
     box-shadow: none; /*getting rid of box-shadow when you click on hamburger icon*/
 }
 
+.navbar-toggler{
+    padding-right: 5px;
+    padding-top: 0;
+}
+
 .navbar-toggler-icon{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(59, 201, 219, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .navbar-collapse{
-    margin-right: 12px;
+    margin-right: 7px;
 }
 
 .nav-link:link, .nav-link:visited{
@@ -125,7 +130,7 @@ body{
     padding: 5px;
 }
 
-.project-description h3{
+.project-description p{
     color: #3bc9db;
 }
 
@@ -138,6 +143,11 @@ body{
     width: 100%;
     height: auto;
 }
+
+
+
+/*----About Me Section Styles----*/
+/*-------------------------------*/
 
 
 /* I think the layout looks fine all the way up til tablets, I think for tablets I will start adding animations, then at laptops I will make two columns */
@@ -165,9 +175,22 @@ body{
 }
 
 
-/*---Breakpoint for Tablets---*/
+/*---Breakpoint for tablets---*/
 /*----------------------------------*/
 @media (min-width: 768px) {
+
+
+/*----Navbar----*/
+/*--------------*/
+
+.navbar-toggler{
+    padding-right: 10px;
+    padding-top: 0;
+}
+
+.navbar-collapse{
+    margin-right: 12px;
+}
 
 /*--------Home Page---------*/
 /*--------------------------*/
@@ -202,4 +225,20 @@ body{
     animation: fade-in 1s;
 }
 
+}
+
+
+
+/*----Breakpoint for laptops/desktops----*/
+
+@media (min-width: 1200px){
+    .projects{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .project{
+        width:75%;
+    }
 }
