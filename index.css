@@ -40,7 +40,7 @@ body{
 
 
 
-/*---Extra small (BASE STYLE) devices---*/
+/*---Extra small (BASE STYLE) mobile devices---*/
 /*-------------------------*/
 /*this is the base styling used for all device sizes, if there are animations or different font-sizes, they will be added on at the other media queries, you don't need to re-specify display:flex, height: 100vh, etc, for every media query*/
 
@@ -108,16 +108,11 @@ body{
     flex-direction: column;
 }
 
-/* .projects h2{
-    position: absolute;
-    padding-left: 10px;
-} */
-
 .project{
     width:70%;
-    height: 65vh;
+    height: 50vh;
     margin: 0 auto;
-    padding: 8vh 0;
+    padding-top: 5vh;
 }
 
 .project-content{
@@ -147,9 +142,9 @@ body{
 
 
 
-/*---Breakpoint for small devices---*/
+/*---Breakpoint for Tablets---*/
 /*----------------------------------*/
-@media (min-width: 600px) {
+@media (min-width: 768px) {
 
 
 
