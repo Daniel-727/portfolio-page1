@@ -156,18 +156,60 @@ body{
 /*----About Me Section Styles----*/
 /*-------------------------------*/
 
+.about-me{
+    width: 80%;
+    margin: 120px auto;
+}
 
 .about-me-content{
     display: flex;
     flex-direction: column;
-    margin: 120px 30px 0 30px;
+    margin: 0 auto;
     /* box-shadow: 0 10px 20px rgba(255,255,255,0.2); */
 }
 
 .about-me-content img{
     margin: 40px;
     border-radius: 50%;
-    
+}
+
+
+
+/*----------Footer-----------*/
+/*---------------------------*/
+
+footer{
+    background-color: #212529;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.icons{
+    text-decoration: none;
+}
+
+
+.icons:link, .icons:visited{
+    color: #3bc9db;
+    text-decoration: none;
+}
+
+/* .github{
+    margin-right: 50px;
+} */
+
+.icons:hover, .icons:active{
+    color: #0b7285;
+    text-decoration: none;
+}
+
+.links a:link, .links a:visited{
+    color: #3bc9db;
+    text-decoration: none;
 }
 
 /* I think the layout looks fine all the way up til tablets, I think for tablets I will start adding animations, then at laptops I will make two columns */
@@ -195,7 +237,6 @@ body{
 
 .about-me{
     width: 80%;
-    margin: 0 auto;
 }
 
 }
@@ -280,7 +321,6 @@ body{
 
 .about-me{
     width: 70%;
-    margin: 0 auto;
 }
 
 
@@ -297,7 +337,6 @@ body{
 
     .about-me{
         width: 55%;
-        margin: 0 auto;
     }
 }
 
@@ -318,6 +357,5 @@ body{
 
     .about-me{
         width: 50%;
-        margin: 0 auto;
     }
 }
